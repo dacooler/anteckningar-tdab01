@@ -12,7 +12,7 @@ $P(A | B) = P(A inter B) / P(B)$
 
 == Bayes sats
 
-$ P(A | B) = (P(B | A) * P(A)) / P(B) $
+$P(A | B) = P(B | A) dot P(A) "/" P(B)$
 
 == Alternativ form av Bayes sats:
 $ P(A|B) = (P(B|A) dot P(A))/(P(B|A) dot P(A) + P(B|A^c) dot P(A^c)) space space space space (A^c = accent(A, -)) $
