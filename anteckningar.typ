@@ -107,8 +107,6 @@ $"STD"_("ERR") = s^2/n$
 När du tar standardavvikelser på ett medelvärde
 $"STD"_("ERR") = s/sqrt(n)$
 
-
-
 == Konvertera Gamma till Poisson
 
 $ P("Gamma"(alpha, lambda) > k) = P("Poisson"(lambda * k) < alpha) $
@@ -125,6 +123,12 @@ n = storleken av stickprovet
 
 Om n är stort gäller (notera "- 0.5"!):
 $ P("Binom"(n, p) >= a) approx \ P("Norm"(mu = p q, sigma = n p (1 - p)) >= a - 0.5) $
+
+== Skattning av parametrar
+
+$accent(theta, hat)$ är en väntevärdesriktig skattning av $theta$ omm $EE[accent(theta, hat)] = theta$
+
+$accent(theta, hat)$ är en konsistent skattning av $theta$ omm $"Var"[accent(theta, hat)] -> 0$ då $n -> infinity$ där n är storleken på stickprovet
 
 == Hypotestest
 
