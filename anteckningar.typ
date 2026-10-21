@@ -203,11 +203,37 @@ $"var"(b_1) = (sum_i (x_i - accent(x, -)^2 "var"(y_i))) / s_(x x)^2 = sigma^2 / 
 
 $b_0 = accent(y, -) - b_1 accent(x, -)$
 
-=== konfidens-intervall och hypotestest för b_1
+=== konfidensintervall och hypotestest för b_1
 
 $b_1 plus.minus t_(alpha "/" 2) s / sqrt(S_(x x))$
 
 $t = (b_1 - B) / (s "/" sqrt(S_(x x)))$
 
-== bayesiskt konfidens-intervall/kredibilitets-intervall
+=== konfidensintervall för medelvärdet av y vid en punkt x
+
+om $y = b_0 + b_1 * x$ då är konfidensintervallet för Y
+
+$ y plus.minus t_(alpha "/" 2) dot s dot sqrt(1 / n + (x - accent(x, -))^2 / S_(x x)) $
+
+där t-fördelningen har n - 2 frihetsgrader, och $s^2 = "SS"_"ERR" "/" (n - 2)$ där $"SS"_"ERR" = sum_i (y_"obs,i" - y_i)^2$ där $y_"obs,i"$ är det observerade värdet och $y_i$ är värdet från den linjära regressionsmodellen.
+
+=== konfidensintervallet för ett specifikt y vid en punkt x
+
+Samma som ovan men
+
+$ y plus.minus t_(alpha "/" 2) dot s dot sqrt(1 + 1 / n + (x - accent(x, -))^2 / S_(x x)) $
+
+== Bayesiansk estimator
+
+$ EE(theta | x) = integral theta pi(theta | x) d theta $
+
+== Bayesiansk konfidensintervall (kredibilitetsintervall)
+
+$P(theta in [a, b] | x) = integral_a^b pi(theta | x) d theta = 0.95$.
+Dela sen upp i $P(theta <= a) = integral_(- infinity)^a pi(theta | x) d theta = 0.025$ och $P(theta <= b) = integral_(- infinity)^b pi(theta | x) d theta = 0.975$ och beräkna a samt b för hand eller med dator.
+
+== Bayesiansk hypotestestet
+
+$H_0 : theta in Theta_0 "vs" H_A : theta in Theta_A$.
+Förkasta $H_0$ om $pi(Theta_0 | x) < pi(Theta_A | x)$
 
