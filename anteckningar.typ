@@ -207,9 +207,9 @@ $"var"(b_1) = (sum_i (x_i - accent(x, -)^2 "var"(y_i))) / s_(x x)^2 = sigma^2 / 
 
 $b_0 = accent(y, -) - b_1 accent(x, -)$
 
-=== konfidensintervall och hypotestest för b_1
+=== konfidensintervall och hypotestest för $b_1$
 
-$b_1 plus.minus t_(alpha "/" 2) s / sqrt(S_(x x))$
+$b_1 plus.minus t_(alpha "/" 2) s / sqrt(S_(x x))$ där $s = sqrt(sum (y_i - accent(y, hat)_i)^2 / (n - 2))$
 
 $t = (b_1 - B) / (s "/" sqrt(S_(x x)))$
 
