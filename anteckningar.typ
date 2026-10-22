@@ -247,5 +247,22 @@ Dela sen upp i $P(theta <= a) = integral_(- infinity)^a pi(theta | x) d theta = 
 $H_0 : theta in Theta_0 "vs" H_A : theta in Theta_A$.
 Förkasta $H_0$ om $pi(Theta_0 | x) < pi(Theta_A | x)$
 
-#image("info.png", width: 60%)
+#image("info.png", width: 80%)
 
+== Posterior från prior
+#table(
+  columns: (1fr, 1fr, 2fr),
+  table.header([Likelihood], [Prior], [Posterior]),
+
+  [Bernoulli / binomial],
+  [$p ∼ "Beta"(a, b)$],
+  [$p ∣ x ∼ "Beta"(a + s, b + f)$; $s$ = total successes, $f$ = total failures],
+
+  [Poisson counts with exposures $t_i$],
+  [$λ ∼ "Gamma"(a, b)$],
+  [$λ ∣ x ∼ "Gamma"(a + sum_i x_i, b + sum_i t_i)$],
+
+  [Exponential observations with rate $λ$],
+  [$λ ∼ "Gamma"(a, b)$],
+  [$λ ∣ x ∼ "Gamma"(a + n, b + sum_i x_i)$],
+)
