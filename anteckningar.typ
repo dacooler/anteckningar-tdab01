@@ -50,19 +50,21 @@ Där $"STD"_"ERR" = s / sqrt(n)$
 
 == Regression
 
-$S S_"TOTAL" = sum_i (y_i - accent(y, -))^2$
+#grid(columns: 2)[
+  $S S_"TOTAL" = sum_i (y_i - accent(y, -))^2$
 
-$S S_"REG" = sum_i (accent(y_i, hat) - accent(y, -))^2$
+  $S S_"REG" = sum_i (accent(y_i, hat) - accent(y, -))^2$
 
-$S S_"ERR" = sum_i (y_i - accent(y, hat))^2$
+  $S S_"ERR" = sum_i (y_i - accent(y, hat))^2$
 
-$R^2 = (S S_"REG")/(S S_"TOTAL")$
+  $R^2 = (S S_"REG")/(S S_"TOTAL")$
+][
+  #image("extrapolating.png", width:80%)
+]
 
 $R^2$ är andelen av den totala variationen förklarad av modellen.
 
 $P(max(x_0, ..., x_n) <= x) = P(x_1 <= x, ... , x_n <= x)$
-
-#image("extrapolating.png", width:80%)
 
 == Väntevärde och varians
 === Definition
@@ -96,7 +98,6 @@ $"Var"[X + Y] = "Var"[X] + "Var"[Y]$
 
 $PP(abs(X-mu) > epsilon)<=(sigma/epsilon)^2$
 
-=== Normalfördelning:
 ==== Hur summerar normalfördelning
 
 $X ~ "norm"(sigma=sigma_x, mu=mu_x)$
