@@ -2,7 +2,8 @@
 // Snälla ha marginal jag får huvudvärk av att titta på skiten annars
 // Marginal behövs inte hallå fett onödigt
 //#set page(margin: (top:0.2cm, bottom:0cm, left:0cm, right:0cm))
-#set page(margin: (top: 1.2cm, bottom: 1cm, left: 1cm, right: 1cm))
+#set page(margin: (top: 1.2cm, bottom: 1cm, left: 0.8cm, right: 0.8cm))
+#set text(10.4pt)
 
 #set page(columns: 2)
 
@@ -60,6 +61,8 @@ $R^2 = (S S_"REG")/(S S_"TOTAL")$
 $R^2$ är andelen av den totala variationen förklarad av modellen.
 
 $P(max(x_0, ..., x_n) <= x) = P(x_1 <= x, ... , x_n <= x)$
+
+#image("extrapolating.png", width:80%)
 
 == Väntevärde och varians
 === Definition
