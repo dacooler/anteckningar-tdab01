@@ -1,8 +1,8 @@
 
 // Snälla ha marginal jag får huvudvärk av att titta på skiten annars
 // Marginal behövs inte hallå fett onödigt
-//#set page(margin: (top:0.2cm, bottom:0cm, left:0cm, right:0cm))
-#set page(margin: (top: 1.2cm, bottom: 1cm, left: 1cm, right: 1cm))
+#set page(margin: (top:0.2cm, bottom:0cm, left:0cm, right:0cm))
+//#set page(margin: (top: 1.2cm, bottom: 1cm, left: 1cm, right: 1cm))
 
 #set page(columns: 2)
 
