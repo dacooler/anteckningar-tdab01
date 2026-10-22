@@ -1,8 +1,8 @@
 
 // Snälla ha marginal jag får huvudvärk av att titta på skiten annars
 // Marginal behövs inte hallå fett onödigt
-#set page(margin: (top:0.2cm, bottom:0cm, left:0cm, right:0cm))
-//#set page(margin: (top: 1.2cm, bottom: 1cm, left: 1cm, right: 1cm))
+//#set page(margin: (top:0.2cm, bottom:0cm, left:0cm, right:0cm))
+#set page(margin: (top: 1.2cm, bottom: 1cm, left: 1cm, right: 1cm))
 
 #set page(columns: 2)
 
@@ -14,12 +14,14 @@ $P(A | B) = P(A inter B) / P(B)$
 
 $P(A | B) = P(B | A) dot P(A) "/" P(B)$
 
+/* Den här skiten är fett onödig hallå
 == Alternativ form av Bayes sats:
 $ P(A|B) = (P(B|A) dot P(A))/(P(B|A) dot P(A) + P(B|A^c) dot P(A^c)) space space space space (A^c = accent(A, -)) $
 
 == Lagen om total sannolikhet
 $B_1,…,B_5$ är en partitionering av S. Bayes sats ger då
 $ P(B) = P(B|A) dot P(A) + P(B|accent(A, -)) dot P(accent(A, -)) $
+*/
 
 == Räknelag
 
@@ -207,9 +209,9 @@ $"var"(b_1) = (sum_i (x_i - accent(x, -)^2 "var"(y_i))) / s_(x x)^2 = sigma^2 / 
 
 $b_0 = accent(y, -) - b_1 accent(x, -)$
 
-=== konfidensintervall och hypotestest för b_1
+=== konfidensintervall och hypotestest för $b_1$
 
-$b_1 plus.minus t_(alpha "/" 2) s / sqrt(S_(x x))$
+$b_1 plus.minus t_(alpha "/" 2) s / sqrt(S_(x x))$ där $s = sqrt(sum (y_i - accent(y, hat)_i)^2 / (n - 2))$
 
 $t = (b_1 - B) / (s "/" sqrt(S_(x x)))$
 
@@ -240,4 +242,6 @@ Dela sen upp i $P(theta <= a) = integral_(- infinity)^a pi(theta | x) d theta = 
 
 $H_0 : theta in Theta_0 "vs" H_A : theta in Theta_A$.
 Förkasta $H_0$ om $pi(Theta_0 | x) < pi(Theta_A | x)$
+
+#image("info.png", width: 60%)
 
